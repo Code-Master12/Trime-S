@@ -117,6 +117,7 @@ local function onKeyPressC(input, gameProcessed)
 
         while isPressingC do
             plr.Character:MoveTo(Vector3.new(plrPos.X, posAD, plrPos.Z))
+            wait(0.07)
         end
     end
 end
