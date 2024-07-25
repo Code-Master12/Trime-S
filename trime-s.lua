@@ -1,90 +1,89 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code-Master12/trime-ui-lib/main/trime-library.lua"))()
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg(data) m=string.sub(data, 0, 76) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+local Library = loadstring(game:HttpGet(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('qIWWhiwbALahHsfwzxudVWnUlAyJBldHjIKDogQvVgzGulSQnGDICuAXyuLxPPDhKPaBkzRRTydGaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NvZGUtTWFzdGVyMTIvdHJpbWUtdWktbGliL21haW4vdHJpbWUtbGlicmFyeS5sdWE=')))()
 --https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua
-local Window = Library.CreateLib("Trime -S", "BloodTheme")
+local Window = Library.CreateLib(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('VCRZiYnAjpGwMRNyQyzkromKQxUivQjMQzCHWyFfzliMxezykaGIcGgsfkGCfksAjMnEBexyqHblVHJpbWUgLVM='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('eBVSUaiqepxeiTBdREeSZieAPLhMpAbblIaCeHzCCZygWJLWwOpTNeWffqVCPmUFSoafgmPIqgPSQmxvb2RUaGVtZQ=='))
 
-local Main = Window:NewTab("Main")
-local Section = Main:NewSection("Main")
-local plr = game.Players.LocalPlayer
-local humanoid = plr.Character.Humanoid
+local Main = Window:NewTab(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ODYAcEoxgcWqCPISZVlwZUHSnySwPNNdLGOkyvBOCMGkbNoZhkCVwDbToCObCKGVviZGfhTQweAhTWFpbg=='))
+local Section = Main:NewSection(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('VMRXNNygKhMXuQxYgvgXhGDuQmLEdumJYRZqLnzXRkPqsqaIlsJkvLYtCxATqjDuiZsELzMFNDmhTWFpbg=='))
+local plr = game.Players.LocalPlayer.Character.Humanoid
 local disabled = false
-local userInputService = game:GetService("UserInputService")
+local userInputService = game:GetService(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('zIVVVgKpZfnBcSRbBXVfkeFLTwnSuWTunqBXDMBQYlzvEElNkDAUKaFxzATKmfuSjYzqrlyhxUdUVXNlcklucHV0U2VydmljZQ=='))
 
-local PKN = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-PKN/main/pkn.lua'))()
-local ESP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-ESP/main/esp.lua'))()
-local TP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-TP/main/tp.lua'))()
+local PKN = loadstring(game:HttpGet(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('nGWZtJrCIaKeYfjbLmsHtCdKXVPQPSlZoPrioakJuhnxQDDoRUtDBZPHyQXtAEAmEaGWtiVZfdWHaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NvZGUtTWFzdGVyMTIvVHJpbWUtUy1QS04vbWFpbi9wa24ubHVh')))()
+local ESP = loadstring(game:HttpGet(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('TpnNCQwmedgXJOaGTdPmvlRzodnpMqPnTExshNKLqfhuVFLfTmbyWOdWDoXXnYfewQaJHxwVZJVXaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NvZGUtTWFzdGVyMTIvVHJpbWUtUy1FU1AvbWFpbi9lc3AubHVh')))()
 
-print("Trime -S: Succesfully injected! Developed by: Metricsect Dev & mutocan_baba1")
+print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('MOlhSNLelMcpAtxCzmlBzapSexWhgwNtnhXmeFAguLpcRjYjlyxBJQavMtqnEiBOsCjXmFTuYwbTVHJpbWUgLVM6IFN1Y2Nlc2Z1bGx5IGluamVjdGVkISBEZXZlbG9wZWQgYnk6IE1ldHJpY3NlY3QgRGV2ICYgbXV0b2Nhbl9iYWJhMQ=='))
 
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Trime -S";
-    Text = "Succesfully injected!\nDeveloped by: Metricsect Dev & mutocan_baba1";
+game:GetService(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('QwWWYzOFPhhRVvzcLJqILRDXZJgLBUfwRqzdFVKQPsIPgmpOROZYtTzIQyIUjcRbIlpVIHPHGBUPU3RhcnRlckd1aQ==')):SetCore(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('zKBMAsYbwRzRfBcjfFUnSUhWHSSmaXnqoTSuAiZBwnDTLAthqkeXGeFxqwVnlLEwoYXGVoGeyolNU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ZFDWcwfCAzKcFfmGuOzcfGvoHhyRpsRKgUFwmhEDCzJfOHgbrfXClBNntiTHEXLJoCXnmcVaKGBUVHJpbWUgLVM=');
+    Text = ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('CXvTjuWZahPNpibxjqasxUyaMffmHQrKTVoCUhCOoWGeuPzhDOiVWFdNMbzWwwbfsweHRxONaBLnU3VjY2VzZnVsbHkgaW5qZWN0ZWQhXG5EZXZlbG9wZWQgYnk6IE1ldHJpY3NlY3QgRGV2ICYgbXV0b2Nhbl9iYWJhMQ==');
 })
 
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Trime -S";
-    Text = "Press Z for toggle UI";
+game:GetService(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('TgigfmKfPbpYqhTfdETbtwjwpoytnxwmuUrrWxZtWWoifxJQQAriESaMCZynAbCDkbeusDRyBLEHU3RhcnRlckd1aQ==')):SetCore(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('oBFUnRORRkEcLCtLFiQVBfvNJNRtTUpGCGvDmjeVSYllkzcOqwTYStBDzepfjsUyyizgYSqOjGCSU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ZWpSTdQHvSwxiqEttNXRRdIscCJHteYIXksvzTeHZuEHriCJOEiGvucxPYKbflsWUSDATQfIEqIKVHJpbWUgLVM=');
+    Text = ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('RfzjkYhIevkAyakEObfkDIQJirrWyMfhYIADFrvoeaUtBeEIHDCogeVwaEmdKWtccZjnMIDxzGhsUHJlc3MgWiBmb3IgdG9nZ2xlIFVJ');
 })
 
-Section:NewButton("Infinite Yield", "FE Admin commands for all roblox games.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    print("Trime -S: Infinite yield succesfully started! Place ID:", game.PlaceId)
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('NPuOTUNRWHbSzQpnmQueruvdGKQvZuNNlHMFmZohrTFPxaPiZpUNGPncoLtxuivswvBmKfmbOPpcSW5maW5pdGUgWWllbGQ='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('pwYEdcXWYFMWhdTzTRFmFZrQqyfNKODpleoblgeEjgXZNeKlAuKnHdPVTdVEybrnAXyFlUNKGYYTRkUgQWRtaW4gY29tbWFuZHMgZm9yIGFsbCByb2Jsb3ggZ2FtZXMu'), function()
+    loadstring(game:HttpGet(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('DSmaRznKPmLliKAqIRxOAYGfIsnRgCqEJZsLfCtxPrvaieYxfXZRnVKZejqMzUdOCSrgLdVBncbdaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0VkZ2VJWS9pbmZpbml0ZXlpZWxkL21hc3Rlci9zb3VyY2U=')))()
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('qDDYKPpQfFWrrdthsZxxWVUdeCjhkZYIFlwOsCpoYVCrrQWzWDvHmkUsTZOqBKHzIVidDGKDRZWhVHJpbWUgLVM6IEluZmluaXRlIHlpZWxkIHN1Y2Nlc2Z1bGx5IHN0YXJ0ZWQhIFBsYWNlIElEOg=='), game.PlaceId)
 end)
 
-Section:NewButton("Toggle ESP", "Toggle ESP.", function()
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('kiQFRpxvxwtBOmiHaGtjwQFbYcbpkopJeDzzKSTeUWXNRHLvFGfdWGysmgYimYKvcWUVuewGEllnVG9nZ2xlIEVTUA=='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('exeqPLtLYuLWquCjvhkYogJIKqsbLcyfEcDzoyfllpkfzHnpGaIWcpPxmyNGTupfndcYSVWjCtfZVG9nZ2xlIEVTUC4='), function()
     ESP:toggleESP()
-    print("Trime -S: ESP Toggled! Place ID:", game.PlaceId)
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('hqRPAfZSXMhMDeTZHFjSAAzCIXLLseoLeQknCqfNpEZdHgOfOSuzUzsMuryZNZeWYNKQbRXPreTEVHJpbWUgLVM6IEVTUCBUb2dnbGVkISBQbGFjZSBJRDo='), game.PlaceId)
 end)
 
-Section:NewButton("Exit", "Exits from Trime -S", function()
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('AISPsOrbJRNOoYfgbHWaWuHUTTSiBZVGpTuyTKMohnnHdGFQVDrSdCXdMsJPtoTPPeXmxICHClmzRXhpdA=='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('FpntRIEjbZuUlwsBVaZmpXWsLMKIJkBILFdOwwzMXybgBCPquDzmNjNDUBoNXBkwhQOzmioNQLwwRXhpdHMgZnJvbSBUcmltZSAtUw=='), function()
     disabled = true
     Library:HideUI()
-    print("Trime -S: Exit made Place ID:", game.PlaceId)
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('pnYLbbiLqHWhDXgDaZFKEeZcyJIXCgJCMTSUtiuwIhyYYRiZrcOkjsYtoALRAzFgYkcTWbIeSdIuVHJpbWUgLVM6IEV4aXQgbWFkZSBQbGFjZSBJRDo='), game.PlaceId)
 end)
 
-local Section = Main:NewSection("---------------------------- CONTROLS ----------------------------")
+local Section = Main:NewSection(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('BieKboOuepAdEHHwyUNpkYIlNFrJRSqtDdxAnEONWDtSghlxOoKGUaFeJfCJMCrunKJFQSDFAgEzLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBDT05UUk9MUyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t'))
 
-Section:NewLabel("Z: Toggle UI")
+Section:NewLabel(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('LmwrNWCUglJLNoyTFKAQxieiSCSaNczlkFtWuclgOkwseLVMoegCCoZuWFnCnYPneAXYwCqGrYmbWjogVG9nZ2xlIFVJ'))
 
-local Main = Window:NewTab("Player")
-local Section = Main:NewSection("Player")
+local Main = Window:NewTab(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('HmVFEOeRIHLaRRKGgfRWOqtSMToheDTczWdNFytIwrJHJAvhtoFcrSQGzZlflsQuOBIkokWOAkFsUGxheWVy'))
+local Section = Main:NewSection(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('uAZdJwsBbSknCuDDTXkraTQPxdefZmsjaXdlYRMCDubaubUIPyIKkWyEnpJLcLKHrNfQYqrNkFzwUGxheWVy'))
 
-Section:NewButton("Reset Speed & Jump Power", "This button reset speed & jump power.", function()
-    humanoid.WalkSpeed = 16
-    humanoid.JumpPower = 50
-    print("Trime -S: Speed & Jump Power have been reset! Place ID:", game.PlaceId)
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Trime -S";
-        Text = "Speed & Jump Power have been reset!";
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('rXDyDMaIcupyYwdxRVSwIRtSRChhiSiEPAuBvsfKdeaLvGJOoQdFsBxhoCsjRZgkvbyQJuIhRVptUmVzZXQgU3BlZWQgJiBKdW1wIFBvd2Vy'), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('hCEVzXALcTuQXMSuCYALEwHogKWwpmfSUzLxarUeRTwIRVoSdIxpahdxxtOVJvazMhnLqyuTridGVGhpcyBidXR0b24gcmVzZXQgc3BlZWQgJiBqdW1wIHBvd2VyLg=='), function()
+    plr.WalkSpeed = 16
+    plr.JumpPower = 50
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('QrjtSbFwGVOdiAGTTgJUmRtMsxYaHMjLPcjiMMeNrBamygglfbmgtDlaqTosPYpLJuQmyoTAffaPVHJpbWUgLVM6IFNwZWVkICYgSnVtcCBQb3dlciBoYXZlIGJlZW4gcmVzZXQhIFBsYWNlIElEOg=='), game.PlaceId)
+    game:GetService(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('fZIYsKBLerQfeQVIssNXRUxYOwhRMXmiiNNDsuiHuHPCYVGJaSWHBivijtVOIkPNNsjeAJVwCFpJU3RhcnRlckd1aQ==')):SetCore(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('TbozJItsRukqoMaRCrVmEwiiMmrbCBtUkLRKUsRfwLjcckpevYHLntaqJJTmFggzpUCUvNOqonglU2VuZE5vdGlmaWNhdGlvbg=='), {
+        Title = ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('EBMbqFGiAfolmjMRNglcmhHiGucuHCjuyFwuEPFlQNHeBKbweSgwcHhJEMNZxtLLWFdKOCmPgMssVHJpbWUgLVM=');
+        Text = ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('kygnQUXgoFywTayNsytVbZEyPDqzbaNDxXYfdVpeHTgmVkzPvBCbOYYUrZgxoYtOgTGAoeHOCYOVU3BlZWQgJiBKdW1wIFBvd2VyIGhhdmUgYmVlbiByZXNldCE=');
     })
 end)
 
-Section:NewSlider("Speed Hack", "This slider adjusts the speed hack.", 200, 16, function(speed)
-    humanoid.WalkSpeed = speed
+Section:NewSlider(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('LGITqvetnfUqavwaIeRLanwyydmseTeSRKsGiXCIVlQHNEVGtyZAauAfKJRUEDpOJSozLhTPKejyU3BlZWQgSGFjaw=='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('yVBoRzzSOjQSiTIdxrrFkqsmaufTVtmohgQmRPqnCFllxyxxpALaHWzwShnTuQjPtYnopzykSpJGVGhpcyBzbGlkZXIgYWRqdXN0cyB0aGUgc3BlZWQgaGFjay4='), 200, 16, function(speed)
+    plr.WalkSpeed = speed
 end)
-Section:NewSlider("Jump Hack", "This slider adjusts the jump power hack.", 500, 50, function(jumpPower)
-    humanoid.JumpPower = jumpPower
-end)
-
-local Main = Window:NewTab("MVS")
-local Section = Main:NewSection("Murderers VS Sheriffs Scripts")
-
-Section:NewButton("MVS Script", "Murderers VS Sheriffs script. (legit)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mrpopcatfrombupge/FreeCpsvirs/main/Mvss"))()
-    print("Trime -S: MVS Script succesfully started! Place ID:", game.PlaceId)
+Section:NewSlider(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ScaFPKBHbZAvvBRNqfgZnvAtVYCKgWofocCGfINcZvvktKOOxmMFJlgzzyBaiNsaELuJZRdzvGVHSnVtcCBIYWNr'), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('YBgFfXzpGLiFsixBGOhOQQZBzbgbPPMHKgnZYniCRAnNErvzQCyCStiMvzdwkzOFFXoFPKcnggBlVGhpcyBzbGlkZXIgYWRqdXN0cyB0aGUganVtcCBwb3dlciBoYWNrLg=='), 500, 50, function(jumpPower)
+    plr.JumpPower = jumpPower
 end)
 
-Section:NewButton("MVS Script 2", "Murderers VS Sheriffs script 2 (kill all).", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))()
-    print("Trime -S: MVS Script succesfully started! Place ID:", game.PlaceId)
+local Main = Window:NewTab(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('uMxPGUPMApzdasJeSouJcWcSOxqMAPqLzLqFEuLHveYutrGZTibWIFwPphVTvaIbVHAvgtiKiaRVTVZT'))
+local Section = Main:NewSection(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('xncPYrLyeUHxuOKiEpIrgmJiVGGZYlsZYslZXcwzNRALebnXSVewiRpofbnGnSkRWkTOVjdWHiiwTXVyZGVyZXJzIFZTIFNoZXJpZmZzIFNjcmlwdHM='))
+
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('nzAOELEvoKCThMnBQPJysZSHmdFWYYrhEeeBZqhJkpPVjQmgrFTRaeaHtQkLqNsmWUyLNIbkUGlhTVZTIFNjcmlwdA=='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ThUBLXZzvgLeGqeZpvnBRRtFlYpTCEaxOsZQjQuPkFDrHdesjVrmJVzkEEwkbAtKEeIAixapBQljTXVyZGVyZXJzIFZTIFNoZXJpZmZzIHNjcmlwdC4gKGxlZ2l0KQ=='), function()
+    loadstring(game:HttpGet(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ggoGWvHfDBCTxuawnLEUEDTaWfuKvaHLCpGidhyRyVuNMHkIjSXEkUizSxHWgcyACNFYAnIrAznXaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01ycG9wY2F0ZnJvbWJ1cGdlL0ZyZWVDcHN2aXJzL21haW4vTXZzcw==')))()
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('oPasCNuESaGkfBpoaxNYTGhQhaXBGyLZYxGaMcTeRtbzfhKfUlMILTjmbnjiOLxuLrKPijYXqangVHJpbWUgLVM6IE1WUyBTY3JpcHQgc3VjY2VzZnVsbHkgc3RhcnRlZCEgUGxhY2UgSUQ6'), game.PlaceId)
 end)
 
-Section:NewButton("Toggle PKN", "Toggle Player Kill Notification.", function()
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('VylaywgMYlzHfuNxPrFkatOVIaFpYzHLRZLGgTIgiJKltsbYcimWlFbAvYyhiuQRIsfiLhsuWvYzTVZTIFNjcmlwdCAy'), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('CAfYVRenwkDThWUamxTAwecoyEMHWJkhvxWWrzhAkHBMgYiolhusmbIPIRIBXcEbpEvfwBhclTgjTXVyZGVyZXJzIFZTIFNoZXJpZmZzIHNjcmlwdCAyIChraWxsIGFsbCku'), function()
+    loadstring(game:HttpGet(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('qHxjKsqYRmQfLJkZYArasLaMeqRQMotNsboLxaFjzXhvakHZzQMKqfVJWoSfGMsTGtPBieklpvalaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0RlbmkyMTAvbXVyZGVyc3Zzc2hlcnJpZnNkdWVscy9tYWluL3J1YnlodWI='), true))()
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('ZmbhpYSYAMbvSJEheBaGhcKpRAKIpLaCobiDHpQwPFNLEeLFFInFxmIfjUDBQlXRQmpgWNcGIHLdVHJpbWUgLVM6IE1WUyBTY3JpcHQgc3VjY2VzZnVsbHkgc3RhcnRlZCEgUGxhY2UgSUQ6'), game.PlaceId)
+end)
+
+Section:NewButton(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('UfNnfktTiDpjUPkHfJzDKdYtuGbOvjhENeoRnmWZVjFXNFZLEoyxVajYgXyMfSrkjSApXeaZrneeVG9nZ2xlIFBLTg=='), ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('iSZDdcAyTCyqieJXiGapAPXZPyraryohxrUVzXIxPjAJBoEpjfJuFFmeGewRasKPwcsxVhRUOjtlVG9nZ2xlIFBsYXllciBLaWxsIE5vdGlmaWNhdGlvbi4='), function()
     PKN:togglePKN()
-    print("Trime -S: PKN Toggled! Place ID:", game.PlaceId)
-end)
-
-Section:NewButton("Teleport", "Teleports to enemy team's base.", function()
-    TP:checkAndMovePlayer()
+    print(ETWusnQspAbWFHSKkvhHqsanvWmJpdlJjjFcXlVBqg('oHcPpuGeVKTKnkzlSKkIDIcSwfTSHTWEeDTFzkbIVEMOtenWyRWIuBCgLlXdnZomvlgHfWxcqEZMVHJpbWUgLVM6IFBLTiBUb2dnbGVkISBQbGFjZSBJRDo='), game.PlaceId)
 end)
 
 local function onKeyPressZ(input, gameProcessed)
@@ -99,17 +98,4 @@ local function onKeyPressZ(input, gameProcessed)
     end
 end
 
-local function onKeyPressC(input, gameProcessed)
-    if gameProcessed then
-        return
-    end
-
-    if disabled then return end
-
-    if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
-        TP:checkAndMovePlayer()
-    end
-end
-
-userInputService.InputBegan:Connect(onKeyPressC)
 userInputService.InputBegan:Connect(onKeyPressZ)
