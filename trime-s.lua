@@ -99,6 +99,8 @@ local function onKeyPressZ(input, gameProcessed)
     end
 end
 
+local isPressingC = false
+
 local function onKeyPressC(input, gameProcessed)
     if gameProcessed then
         return
@@ -107,9 +109,15 @@ local function onKeyPressC(input, gameProcessed)
     if disabled then return end
 
     if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
+        isPressingC = true
+
         local plr = game.Players.LocalPlayer
         local plrPos = plr.Character.HumanoidRootPart.Position
-        plr.Character:MoveTo(Vector3.new(plrPos.X, plrPos.Y+40, plrPos.Z))
+        local posAD = plrPos.Y+40
+
+        while isPressingC do
+            plr.Character:MoveTo(Vector3.new(plrPos.X, posAD, plrPos.Z))
+        end
     end
 end
 
@@ -121,6 +129,7 @@ local function onKeyReleaseC(input, gameProcessed)
     if disabled then return end
 
     if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
+        isPressingC = false
         local plr = game.Players.LocalPlayer
         local plrPos = plr.Character.HumanoidRootPart.Position
         plr.Character:MoveTo(Vector3.new(plrPos.X, plrPos.Y-40, plrPos.Z))
