@@ -108,7 +108,7 @@ local function onKeyPressC(input, gameProcessed)
 
     if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
         local plrPos = plr.Character.HumanoidRootPart.Position
-        plr.Character:MoveTo(Vector3.new(plrPos.X, plrPos.Y+35, plrPos.Z))
+        plr.Character:MoveTo(Vector3.new(plrPos.X, plrPos.Y+25, plrPos.Z))
     end
 end
 
@@ -121,7 +121,7 @@ local function onKeyReleaseC(input, gameProcessed)
 
     if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
         local plrPos = plr.Character.HumanoidRootPart.Position
-        plr.Character:MoveTo(Vector3.new(plrPos.X, plrPos.Y-35, plrPos.Z))
+        plr.Character:MoveTo(Vector3.new(plrPos.X, plrPos.Y, plrPos.Z))
     end
 end
 
